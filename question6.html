@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Question 6</title>
+    <style>
+        header {
+            background-color: #f0f8ff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h2 {
+            color: #00aaff;
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .quiz-image {
+            max-width: 300px;
+            margin: 30px auto;
+            display: block;
+        }
+
+        .success-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 10px;
+            margin: 20px 0;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1em;
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #008ecc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>English Quiz</h2>
+    </header>
+
+    <div class="container">
+        <h1>Question 6</h1>
+        <p>In which city was the conference that founded the UN held?</p>
+        
+        <img class="quiz-image" src="6.png" alt="Image related to the question">
+
+        <button onclick="checkAnswer('correct')">San Francisco</button>
+        <button onclick="checkAnswer('wrong')">Washington, D.C.</button>
+        <button onclick="checkAnswer('wrong')">Geneva</button>
+        
+        <div id="successMessage" class="success-message">Correct!</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

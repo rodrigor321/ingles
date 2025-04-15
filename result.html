@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Result</title>
+    <style>
+        .cat-image {
+            display: none;
+            max-width: 300px;
+            margin: 20px auto;
+        }
+
+        .congratulation-image {
+            display: none;
+            max-width: 380px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="resultMessage"></h1>
+        <img id="catImage" class="cat-image" src="gato.png" alt="POOR">
+        <img id="congratulationImage" class="congratulation-image" src="fim.png" alt="Congratulations!">
+        <a href="index.html" class="button">Back to Start</a>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const result = urlParams.get('result');
+        
+        
+        document.getElementById('resultMessage').innerText = result === 'correct' ? 'Done, Congratulations!' : 'Wrong!';
+        
+        
+        if (result === 'wrong') {
+            document.getElementById('catImage').style.display = 'block';
+        } else if (result === 'correct') {
+            document.getElementById('congratulationImage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
